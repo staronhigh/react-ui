@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"]
+    },
+    "types": ["node"],
+    "jsx": "react-jsx",                 // ✅ JSX 컴파일 방식 지정
+    "jsxImportSource": "@emotion/react" // ✅ Emotion의 css prop 인식
+  }
+}

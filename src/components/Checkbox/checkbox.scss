@@ -1,0 +1,35 @@
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  input[type='checkbox'] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #888;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+
+    &:checked {
+      background-color: #1ea7fd;
+      border-color: #1ea7fd;
+    }
+
+    &:checked::after {
+      content: '✔';
+      position: absolute;
+      top: 0;
+      left: 3px;
+      color: white;
+      font-size: 14px;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    font-size: 14px;
+  }
+}

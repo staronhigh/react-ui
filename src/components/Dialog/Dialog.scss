@@ -1,0 +1,37 @@
+.dialog-wrap {
+    position: fixed;
+    inset: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    appearance: none;
+z-index: 1000; // ⭐️ 이거 중요!
+    .dim {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+    }
+}
+.dialog {
+    position: relative;
+    min-width: 320px;
+    background: #fff;
+    border-radius: 10px;
+    .btn-close {
+        position:absolute;
+        top:0; right:0;
+    }
+}
+.dialog-content {
+    padding: 30px;
+}
+
+.dialog-wrap.fullscreen {
+    .dialog {
+        width:100%;
+        height: 100%;
+        border-radius:0;
+        overflow-y: auto;
+    }
+}
